@@ -41,6 +41,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    height: 100px;
     color: white;
     text-decoration: none;
 }
@@ -55,7 +56,9 @@ body {
     color: white;
     font-size: 0.625rem;
     letter-spacing: 0.05rem;
+    font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
 }
 
