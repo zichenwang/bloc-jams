@@ -17,10 +17,6 @@ body.collection {
     text-align: center;
 }
 
-.collection-album-container img {
-    width: 80%;
-}
-
 .collection-album-container .caption {
     margin-top: 10px;
 }
@@ -31,10 +27,14 @@ body.collection {
     color: rgba (255, 255, 255, 0.6);
 }
 
-.collection-album.container .caption p a {
+.collection-album-container .caption p a {
     color: rgba(255, 255, 255, 0.6);
 }
 
 .collection-album-container .caption p a.album-name {
     color: white;
+}
+
+.collection-album-container img {
+    width: 80%;
 }
