@@ -58,6 +58,7 @@ body.landing {
     transition-delay: 0.2s;
 }
 
+/*
 .point:hover {
     opacity: 1;
     -webkit-transform: scaleX(1.1) scaleY(1.1);
@@ -69,7 +70,7 @@ body.landing {
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     transition-delay: 0.2s;
-}
+}*/
 
 .point .point-title {
     font-size: 1.25rem;
