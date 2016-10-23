@@ -138,4 +138,33 @@ var setCurrentAlbum = function (album) {
 
 window.onload = function () {
     setCurrentAlbum(albumPicasso);
+    var cover = document.getElementsByClassName('album-cover-art')[0];
+
+    cover.addEventListener('click', function (event) {
+        console.log(event.target);
+        var albumList = [albumImaginDragons, albumPicasso, albumMarconi];
+
+        var currentAlbumArtist = document.getElementsByClassName('album-view-artist')[0].textContent;
+
+        console.log(currentAlbumArtist);
+
+        switch (currentAlbumArtist) {
+        case albumImaginDragons.artist:
+            console.log("image dragon");
+            setCurrentAlbum(albumList[Math.floor(Math.random() * 2) + 1]);
+            break;
+        case albumMarconi.artist:
+            console.log("marconi");
+            setCurrentAlbum(albumList[Math.floor(Math.random() * 2)]);
+            break;
+        case albumPicasso.artist:
+            console.log("picasso");
+            setCurrentAlbum(albumList[0]);
+            break;
+        default:
+            console.log("something wrong")
+        }
+
+    });
+
 };
