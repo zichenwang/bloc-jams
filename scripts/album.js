@@ -186,6 +186,20 @@ var previousSong = function () {
 
 };
 
+var togglePlayFromPlayerBar = function () {
+    var $currentCell = getSongNumberCell(currentlyPlayingSongNumber);
+    if (currentSoundFile.isPaused()) {
+        $currentCell.html(pauseButtonTemplate);
+        $('.main-controls .play-pause').html(playerBarPauseButton);
+        currentSoundFile.play();
+    } else if (currentSoundFile) {
+        $currentCell.html(playButtonTemplate);
+        $('.main-controls .play-pause').html(playerBarPlayButton);
+        currentSoundFile.pause();
+    }
+
+};
+
 var updatePlayerBarSong = function () {
     $('.currently-playing .song-name').text(currentSongFromAlbum.title);
     $('.currently-playing .artist-name').text(currentAlbum.artist);
@@ -214,6 +228,7 @@ var currentVolume = 80;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
+var $playPauseBtn = $('.main-controls .play-pause');
 
 $(document).ready(function () {
     //current album
@@ -221,5 +236,6 @@ $(document).ready(function () {
 
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
+    $playPauseBtn.click(togglePlayFromPlayerBar);
 
 });
